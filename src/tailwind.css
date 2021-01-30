@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+@tailwind base;
+@tailwind components;
+body {
+    font-family: 'DM Sans', sans-serif;
+}
+@tailwind utilities;
+
+.button {
+    @apply text-white px-8 py-4 rounded-md focus:outline-none focus:ring;
+}
+
+.btn-primary {
+    @apply bg-blue-500 hover:bg-blue-400 focus:ring-blue-300;
+}
+
+.btn-danger {
+    @apply bg-red-500 hover:bg-red-400 focus:ring-red-300;
+}
+
+.btn-warning {
+    @apply bg-yellow-500 hover:bg-yellow-400 focus:ring-yellow-300;
+}
+
+.btn-success {
+    @apply bg-green-500 hover:bg-green-400 focus:ring-green-300;
+}
+
+.btn-secondary {
+    @apply bg-gray-700 hover:bg-gray-600 focus:ring-gray-400;
+}
+
+.nav-active {
+    animation: nav-slide 0.7s ease-in forward;
+    @apply flex absolute top-0 left-0 w-8/12 min-h-screen bg-gradient-to-br from-green-200 to-green-300 text-green-900 transform translate-x-0;
+}
+
+@keyframes nav-slide {
+    100% {
+        transform: translateX(200px);
+    }
+}
